@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import {Button} from "@mui/material";
+import {useState} from "react";
+import Calculator from "./Components/Calculator";
 
 function App() {
+
+    const [x, setX] = useState(0);
+    function increment() {
+        setX(x + 1);
+    }
+    function isChanged() {
+        if (!x)
+            return "x hasnt been changed yet";
+        return "x has chnaged";
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <Calculator x={x} username={"Menace"}/>
     </div>
   );
 }
