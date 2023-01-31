@@ -1,6 +1,6 @@
 import logo from './logo.svg';
-import './App.css';
-import {Button} from "@mui/material";
+
+import {Box, Button} from "@mui/material";
 import {useState} from "react";
 import Calculator from "./Components/Calculator";
 
@@ -16,9 +16,9 @@ function App() {
         return "x has chnaged";
     }
   return (
-    <div className="App">
+    <Box>
           <Calculator x={x} username={"Menace"}/>
-    </div>
+    </Box>
   );
 }
 
